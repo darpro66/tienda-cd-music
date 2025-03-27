@@ -50,6 +50,39 @@ text-align: center;
 
 
 
+/*slider*/       
+.slider-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider {
+  display: flex;
+  animation: slide 10s linear infinite;
+}
+
+.slider-item {
+  width: 500px; /* Tamaño fijo de las imágenes */
+ 
+  box-sizing: border-box; /* Incluye el padding dentro del tamaño total */
+}
+
+.slider img {
+  width: 500px; /* Tamaño fijo para las imágenes */
+  height: auto; /* Mantiene la proporción */
+  flex-shrink: 0;
+  padding: 10px;
+}
+
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); } /* Desplaza todo el slider */
+}
+/*-- fin del slider-- */
+
+
 
 
 
