@@ -27,7 +27,7 @@ text-align: center;
   display: flex;
 }
 .logo img{
-  width: 100px;
+  width: 80px;
   border-radius: 10%;
 }
 .nav-link{
@@ -78,14 +78,89 @@ text-align: center;
 
 @keyframes slide {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); } /* Desplaza todo el slider */
+  100% { transform: translateX(-121%); } /* Desplaza todo el slider */
 }
 /*-- fin del slider-- */
 
 
 
+/*card*/
 
+/* Estilos generales para el contenedor principal */
+.productos-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  background-color: #951717;
+}
 
+/* Estilo para cada tarjeta */
+.card-wrapper {
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Encabezado de la tarjeta con la imagen */
+.card-header {
+  width: 100%;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Contenido principal */
+.card-main {
+  background-color: #007BFF;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+/* Precio */
+.card-precio {
+  font-size: 18px;
+  color: #4CAF50;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Botón de compra */
+.card-button {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.btn-comprar {
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-comprar:hover {
+  background-color: #0056b3;
+}
+
+/* Ajuste responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  .card-wrapper {
+    width: 100%;
+  }
+}
 
 
 
