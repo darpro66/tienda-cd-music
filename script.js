@@ -4,76 +4,76 @@
 const prod = [
     {
         imagen: 'img/almafuerte-.jpg',
-        nombre: 'Producto 1',
+        nombre: 'almafuerte:ultimando',
         comprar: 'comprar',
-        precio: 60000
+        precio: '$60.000'
     },
     {
         imagen: 'img/almafuerte-1.jpg',
-        nombre: 'Producto 1',
+        nombre: 'almafuerte:trillando la fina',
         comprar: 'comprar',
-        precio: 50000
+        precio: '$50.000'
     },
     {
         imagen: 'img/guns.jpg',
-        nombre: 'Producto 1',
+        nombre: 'guns:appetite for destruction',
         comprar: 'comprar',
-        precio: 10000
+        precio: '$10.000'
     },
 
     {
         imagen: 'img/silider10.jpg',
-        nombre: 'Producto 1',
+        nombre: 'almafuerte:toro&pampa',
         comprar: 'comprar',
-        precio: 50000
+        precio: '$50.000'
     },
     {
         imagen: 'img/ironmaiden.jpg',
-        nombre: 'Producto 1',
+        nombre: 'iron maiden:the number of the best',
         comprar: 'comprar',
-        precio: 100000
+        precio: '$100.000'
     },
     {
         imagen: 'img/trenloco.jpg',
-        nombre: 'Producto 1',
+        nombre: 'tren loco:venas de acero',
         comprar: 'comprar',
-        precio: 40000
+        precio: '$40.000'
     },
     {
         imagen: 'img/megadeth-t.jpg',
-        nombre: 'Producto 1',
+        nombre: 'megadeth:rust in peace',
         comprar: 'comprar',
-        precio: 100000
+        precio: '$100.000'
     },
     {
         imagen: 'img/metallica.jpg',
-        nombre: 'Producto 1',
+        nombre: 'metallica;black&album',
         comprar: 'comprar',
-        precio: 80000
+        precio: '$80.000'
     },
     {
         imagen: 'img/v8-l.jpg',
-        nombre: 'Producto 1',
+        nombre: 'v8:luchando por el metal',
         comprar: 'comprar',
-        precio: 76000
+        precio: '$76.000'
     },
     {
         imagen: 'img/alma-2.jpg',
-        nombre: 'Producto 1',
+        nombre: 'almafuerte:piedra libre',
         comprar: 'comprar',
-        precio: 88000
+        precio:'$88.000' 
     },
     {
         imagen: 'img/nirvana.jpg',
-        nombre: 'Producto 1',
+        nombre: 'nirvana:unplugged',
         comprar: 'comprar',
-        precio: 64000
+        precio: '$64.000'
     },
     {
         imagen: 'img/acido-arg.jpg',
-        nombre: 'Producto 1',
+        nombre: 'hermetica:acido argentino',
         comprar: 'comprar',
-        precio: 59000
+        precio: '$59.000'
     },
 
 ];

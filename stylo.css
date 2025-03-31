@@ -10,10 +10,15 @@
   /* header-navbar */
     
 .container-header{ 
+  width: 100%;
   padding: 20px ;
   background-color: rgb(255, 255, 255);
   display: flex;
 justify-content: space-around;
+position: fixed;
+ 
+ z-index: 1000; 
+ 
 }
 
 
@@ -22,6 +27,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
+
+
 }
 .logo{
   display: flex;
@@ -32,14 +39,19 @@ text-align: center;
 }
 .nav-link{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: 100;
+  font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;
-  color: rgb(99, 98, 97);
+  color: rgb(0, 0, 0);
+  transition: transform 0.3s ease, font-size 0.3s ease;
+
 }
 .nav-link:hover{
   color:#f2a91a ;
-  border-bottom: #f2a91a solid 2px;
+  border-bottom: #f2a91a solid 3px;
+  transform: scale(1.2); /* Aumenta el tamaño al pasar el cursor */
+      font-size: 10px; /* Aumenta ligeramente la fuente */
+
 }
 .nav-list{
   text-decoration: none;
@@ -53,8 +65,9 @@ text-align: center;
 /*slider*/       
 .slider-container {
   width: 100%;
-  overflow: hidden;
+ 
   position: relative;
+   padding-top: 120px;
 }
 
 .slider {
@@ -93,7 +106,8 @@ text-align: center;
   gap: 20px;
   justify-content: center;
   padding: 20px;
-  background-color: #efe8e8;
+  background-color: #ffffff;
+  padding: 130px;
 }
 
 /* Estilo para cada tarjeta */
@@ -102,8 +116,17 @@ text-align: center;
   border: 1px solid #ccc;
   border-radius: 10px;
   background-color: white;
+  border: solid 1px #f2a91a;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+}
+
+.card-wrapper:hover{
+
+  transform: rotate(5deg);
+  transition: transform 0.3s ease-in-out;
+
+   
 }
 
 /* Encabezado de la tarjeta con la imagen */
@@ -123,14 +146,18 @@ text-align: center;
   padding: 15px;
   font-size: 16px;
   font-weight: bold;
-  color: #333;
+  color: #000000;
+ font-size: 21px;
+ font-weight: 400;
   text-align: center;
+   
 }
 
 /* Precio */
 .card-precio {
   font-size: 18px;
-  color: #4CAF50;
+  color: #7c7e7c;
+  font-weight: 800;
   text-align: center;
   margin: 10px 0;
 }
@@ -143,7 +170,7 @@ text-align: center;
 
 .btn-comprar {
   padding: 10px 15px;
-  background-color: #007BFF;
+  background-color:  #f2a91a;
   color: white;
   border: none;
   border-radius: 5px;
@@ -152,8 +179,63 @@ text-align: center;
 }
 
 .btn-comprar:hover {
-  background-color: #0056b3;
+  background-color: #ffb700;
+  color: #7c7e7c;
 }
+    
+    /* WhatsApp button */
+   .bi-whatsapp{
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      color: rgb(0, 255, 38);
+      border: none; 
+      font-size: 40px;
+      width: 50px; /* Ancho */
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+       
+    }
+
+    i, .bi-whatsapp:hover{
+    color: #f2a91a;
+    }
+
+
+    /* Footer */
+    footer {
+      background-color: #1b1919;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+
+
+    .titulo-redes{
+      color: #f2a91a;
+    }
+    footer .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 10px;
+    }
+     .bi-facebook .bi-twitter-x .bi-instagram {transition: transform 0.3s ease;
+    }
+     .bi-facebook .bi-twitter-x .bi-instagram:hover { transform: scale(2.2); /* Agranda el ícono un 20% */
+     color: azure;}
+
+
+
+footer .social-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
 
 /* Ajuste responsive para pantallas pequeñas */
 @media (max-width: 768px) {
