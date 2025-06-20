@@ -237,12 +237,60 @@ footer .social-links a {
 }
 
 
+
+/*panel d econtrol*/
+.table-container{
+ 
+  width: 100%;
+  height: 100vh;
+  margin: 40px 40px;
+}
+.table-panel{
+  width: 100%;
+ font-family: sans-serif;
+ border-collapse: collapse;
+ max-width: 900px;
+ margin: auto;
+}
+.table-panel th, .table-panel td{
+  border:3px solid rgb(236, 154, 14) ;
+}
+
+.table-panel th{
+  padding: 10px;
+  background-color: #f2a91a;
+  color: #130e0e;
+  font-weight: 200;
+}
+.table-panel td{
+  font-size: .75rem;
+  padding: .5rem;
+ }
+ .table-panel, .table-image{
+ text-align: center;
+  
+ }
+.table-image{
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  
+}
+caption{
+  text-align: center;
+  font-weight: 600;
+  color: #f2a91a;
+}
+
+
+
 /* Ajuste responsive para pantallas pequeñas */
 @media (max-width: 768px) {
   .card-wrapper {
     width: 100%;
   }
 }
+
 
 
 
