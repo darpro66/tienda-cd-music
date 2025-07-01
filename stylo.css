@@ -208,6 +208,7 @@ text-align: center;
       background-color: #1b1919;
       color: white;
       padding: 20px;
+      margin-top: 530px;
       text-align: center;
     }
 
@@ -221,6 +222,7 @@ text-align: center;
       justify-content: center;
       gap: 15px;
       margin-top: 10px;
+      
     }
      .bi-facebook .bi-twitter-x .bi-instagram {transition: transform 0.3s ease;
     }
@@ -234,6 +236,7 @@ footer .social-links a {
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s ease;
+  
 }
 
 
@@ -244,13 +247,18 @@ footer .social-links a {
   width: 100%;
   height: 100vh;
   margin: 40px 40px;
+   padding-top: 125px;
+   margin-left: 100px;
 }
 .table-panel{
+  
   width: 100%;
  font-family: sans-serif;
  border-collapse: collapse;
  max-width: 900px;
  margin: auto;
+  margin-left: 300px;
+
 }
 .table-panel th, .table-panel td{
   border:3px solid rgb(236, 154, 14) ;
@@ -271,10 +279,10 @@ footer .social-links a {
   
  }
 .table-image{
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   object-fit: cover;
-  
+  border-radius: 50%;
 }
 caption{
   text-align: center;
