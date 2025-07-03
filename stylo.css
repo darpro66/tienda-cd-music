@@ -5,29 +5,33 @@
         box-sizing: border-box;
       }
 
-
+.layout {
+  min-height: 100vh;           /* 100% del alto visible */
+  display: flex;
+  flex-direction: column;      /* Orden vertical: header -> section -> footer */
+}
 
   /* header-navbar */
     
 .container-header{ 
   width: 100%;
-  padding: 20px ;
+  padding: 10px ;
   background-color: rgb(255, 255, 255);
   display: flex;
 justify-content: space-around;
 position: fixed;
- 
+ top: 0;
  z-index: 1000; 
  
 }
 
 
 .nav-menu{
+ 
 display: flex;
 justify-content: center;
 align-items: center;
 text-align: center;
-
 
 }
 .logo{
@@ -65,7 +69,7 @@ text-align: center;
 /*slider*/       
 .slider-container {
   width: 100%;
- 
+ flex-direction: 1;
   position: relative;
    padding-top: 120px;
 }
@@ -101,6 +105,7 @@ text-align: center;
 
 /* Estilos generales para el contenedor principal */
 .productos-container {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -108,6 +113,7 @@ text-align: center;
   padding: 20px;
   background-color: #ffffff;
   padding: 130px;
+  flex: 1;
 }
 
 /* Estilo para cada tarjeta */
@@ -203,15 +209,22 @@ text-align: center;
     }
 
 
+
+
+ 
+
+
+
+
     /* Footer */
     footer {
-      background-color: #1b1919;
+     background-color: rgb(69, 66, 66);
       color: white;
       padding: 20px;
-      margin-top: 530px;
+    
       text-align: center;
     }
-
+ 
 
 
     .titulo-redes{
@@ -220,44 +233,36 @@ text-align: center;
     footer .social-links {
       display: flex;
       justify-content: center;
-      gap: 15px;
-      margin-top: 10px;
+      gap: 35px;
+      margin-top: 18px;
       
     }
-     .bi-facebook .bi-twitter-x .bi-instagram {transition: transform 0.3s ease;
+   .bi-facebook:hover{
+      color: antiquewhite;
+      transform: scale(2.3); /* se agranda un 30% */
     }
-     .bi-facebook .bi-twitter-x .bi-instagram:hover { transform: scale(2.2); /* Agranda el ícono un 20% */
-     color: azure;}
-
-
-
-footer .social-links a {
-  color: white;
-  text-decoration: none;
-  font-size: 20px;
-  transition: color 0.3s ease;
-  
-}
-
-
+    .bi-instagram:hover{
+      color: antiquewhite;
+    }
+      .bi-twitter-x:hover{
+      color: antiquewhite;
+    }
 
 /*panel d econtrol*/
 .table-container{
- 
   width: 100%;
-  height: 100vh;
+ height: auto;
   margin: 40px 40px;
-   padding-top: 125px;
-   margin-left: 100px;
+ padding-top: 75px;
+   margin-left: 10px; 
 }
 .table-panel{
-  
   width: 100%;
  font-family: sans-serif;
  border-collapse: collapse;
  max-width: 900px;
  margin: auto;
-  margin-left: 300px;
+ /* margin-left: 300px;*/
 
 }
 .table-panel th, .table-panel td{
@@ -271,8 +276,9 @@ footer .social-links a {
   font-weight: 200;
 }
 .table-panel td{
-  font-size: .75rem;
   padding: .5rem;
+  font-size: 16px;
+  font-weight: 600;
  }
  .table-panel, .table-image{
  text-align: center;
@@ -282,15 +288,23 @@ footer .social-links a {
   width: 60px;
   height: 60px;
   object-fit: cover;
-  border-radius: 50%;
+  
 }
-caption{
-  text-align: center;
+ 
+
+.serch{
+  display: flex;
+  justify-content: center;
+  padding: 26px;
+}
+.form-label{
+  color: #050505;
   font-weight: 600;
-  color: #f2a91a;
+  text-transform: uppercase;
 }
-
-
+.fron-control{
+  border:solid 2px #131312;
+}
 
 /* Ajuste responsive para pantallas pequeñas */
 @media (max-width: 768px) {
