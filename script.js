@@ -163,7 +163,14 @@ arrayProd.forEach((prod) => {
             </td>
             <td class="td-titulo">${prod.nombre}</td>
             <td class="td-precio">${prod.precio}</td>
-            <td class="td-stoc">${prod.stoc}</td>
+            <td class="td-stoc">${prod.stoc}</td>git 
+             <td class="action"> <button class="borrar" onclick="deleteProd('${prod.id}')">
+             <i class="bi bi-trash"></i>
+             </button>
+              <button class="editat">
+              <i class="bi bi-pen"></i>
+             </button>
+             </td>
   </tr>
   
   
@@ -193,3 +200,16 @@ function inputSerch(evt){
 
     renderProd(filteredProd)
 }
+
+function deleteProd(idProd){
+  const indice = prod.findIndex((prod) =>  {
+    if(prod.id === idProd){
+        return true
+    }
+  })  
+  prod.splice(indice, 1)
+  renderProd(prod)
+}
+
+
+ 
