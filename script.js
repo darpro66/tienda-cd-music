@@ -7,21 +7,24 @@ const prod = [
         nombre: 'almafuerte:ultimando',
         comprar: 'comprar',
         precio: '$60.000',
-        stoc:'0'
+        stoc:'0',
+        id:'1'
     },
     {
         imagen: 'img/almafuerte-1.jpg',
         nombre: 'almafuerte:trillando la fina',
         comprar: 'comprar',
         precio: '$50.000',
-         stoc:'0'
+         stoc:'0',
+        id:'2'
     },
     {
         imagen: 'img/guns.jpg',
         nombre: 'guns:appetite for destruction',
         comprar: 'comprar',
         precio: '$10.000',
-         stoc:'5'
+         stoc:'5',
+           id:'3'
     },
 
     {
@@ -29,28 +32,32 @@ const prod = [
         nombre: 'almafuerte:toro&pampa',
         comprar: 'comprar',
         precio: '$50.000',
-         stoc:'0'
+        stoc:'0',
+        id:'4'
     },
     {
         imagen: 'img/ironmaiden.jpg',
         nombre: 'iron maiden:the number of the best',
         comprar: 'comprar',
         precio: '$100.000',
-         stoc:'45'
+        stoc:'45',
+        id:'5'
     },
     {
         imagen: 'img/trenloco.jpg',
         nombre: 'tren loco:venas de acero',
         comprar: 'comprar',
         precio: '$40.000',
-         stoc:'22'
+        stoc:'22',
+        id:'6'
     },
     {
         imagen: 'img/megadeth-t.jpg',
         nombre: 'megadeth:rust in peace',
         comprar: 'comprar',
         precio: '$100.000',
-         stoc:'0'
+        stoc:'0',
+        id:'7'
 
     },
     {
@@ -58,7 +65,8 @@ const prod = [
         nombre: 'metallica;black&album',
         comprar: 'comprar',
         precio: '$80.000',
-         stoc:'2'
+        stoc:'2',
+        id:'8'
 
     },
     {
@@ -66,7 +74,8 @@ const prod = [
         nombre: 'v8:luchando por el metal',
         comprar: 'comprar',
         precio: '$76.000',
-         stoc:'12'
+        stoc:'12',
+        id:'9'
 
     },
     {
@@ -74,7 +83,8 @@ const prod = [
         nombre: 'almafuerte:piedra libre',
         comprar: 'comprar',
         precio:'$88.000',
-         stoc:'0'
+        stoc:'0',
+        id:'10'
 
     },
     {
@@ -82,7 +92,8 @@ const prod = [
         nombre: 'nirvana:unplugged',
         comprar: 'comprar',
         precio: '$64.000',
-         stoc:'1'
+        stoc:'1',
+        id:'11'
 
     },
     {
@@ -90,7 +101,8 @@ const prod = [
         nombre: 'hermetica:acido argentino',
         comprar: 'comprar',
         precio: '$59.000',
-         stoc:'4'
+        stoc:'4',
+        id:'12'
 
     },
 
@@ -163,8 +175,8 @@ arrayProd.forEach((prod) => {
             </td>
             <td class="td-titulo">${prod.nombre}</td>
             <td class="td-precio">${prod.precio}</td>
-            <td class="td-stoc">${prod.stoc}</td>git 
-             <td class="action"> <button class="borrar" onclick="deleteProd('${prod.id}')">
+            <td class="td-stoc">${prod.stoc}</td>
+             <td class="action" > <button class="borrar" onclick="deleteProd('${prod.id}')">
              <i class="bi bi-trash"></i>
              </button>
               <button class="editat">
@@ -206,9 +218,44 @@ function deleteProd(idProd){
     if(prod.id === idProd){
         return true
     }
-  })  
-  prod.splice(indice, 1)
-  renderProd(prod)
+  }) 
+  
+  if(indice === -1){
+    Swal.fire({
+      title: 'alerta',
+      text:'no se encontro el usuario',
+      icon:'warning',
+
+      showConfirmButton: true,
+      confirmButtonText:'de acuerdo'
+    })
+  }
+  Swal.fire({
+    title:'¿ESTAS SEGURO?',
+    text:'vas a eliminar este producto ',
+    icon:'warning',
+    showCancelButton: true,
+    showConfirmButton: true,
+    cancelButtonColor:'red',
+    confirmButtonColor:'blue',
+    confirmButtonText:'eliminar',
+    cancelButtonText:'cancelar'
+
+
+  }).then((result) => {
+    if(result.isConfirmed){
+     Swal.fire({
+       title:'producto eliminado',
+        text:'producto eliminado con exito ',
+        icon:'succes'
+     })
+     prod.splice(indice, 1)
+    renderProd(prod)
+       
+    }
+  })
+
+ 
 }
 
 
