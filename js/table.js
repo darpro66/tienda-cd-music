@@ -1,7 +1,5 @@
-1
 
-
-const prod = [
+const prod =[
     {
         imagen: 'img/almafuerte-.jpg',
         nombre: 'almafuerte:ultimando',
@@ -35,6 +33,8 @@ const prod = [
         stoc:'0',
         id:'4'
     },
+
+    
     {
         imagen: 'img/ironmaiden.jpg',
         nombre: 'iron maiden:the number of the best',
@@ -104,65 +104,46 @@ const prod = [
         stoc:'4',
         id:'12'
 
-    },
-
+    }
 ];
 
-const productosContainerHTML = document.querySelector(".productos-container")
-
-
- 
-
-function renderProductos(){
-prod.forEach((prod) =>{
-    productosContainerHTML.innerHTML +=` 
-
-     
-<div class="card-wrapper">
-  <article class="card">
-    <div class="card-header">
-      <!--encabezado-->
-      <img class="card-img" src="${prod.imagen}" alt="">
-    </div>
-    <div class="card-main">
-      <!--contenido principal-->
-      ${prod.nombre}
-    </div>
-     <div class="card-precio">
-    <!--contenido precio-->
-     ${prod.precio}
-    </div>
-    <div class="card-button">
-      <!--bonto de compra-->
-     <button class="btn-comprar">${prod.comprar}</button>
-    </div>
-  </article>
-</div>
-       
- 
-
- `     
 
 
 
- 
-}
-
-
-)
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    renderProductos(); // Llamamos a la función para generar las tarjetas
-});
 
 const tableHTML = document.getElementById("table-container")
 const tableBodyHTML = document.getElementById("table-body")
 
+ 
+
+ 
+
+ 
+ renderProd(prod) 
+ 
+ discoFormHTML.addEventListener("submit", (evento) =>{
+ 
+ evento.preventDefault()
+       const el = evento.target.elements
+
+       const nuevoDisco = {
+        id:crypto.randomUUID,
+        imagen: el.imagen.value,
+        nombre:el.nombre.value 
+       }
+        
+
+       prod.push(nuevoDisco)
+       renderProductos(prod)
+ })
+ 
+ 
+ 
+
 function renderProd(arrayProd){
 
+tableBodyHTML.innerHTML =''
 
-    tableBodyHTML.innerHTML = ''
 
 arrayProd.forEach((prod) => {
  
@@ -195,7 +176,7 @@ arrayProd.forEach((prod) => {
 
 
 }
-renderProd(prod)
+ //aca iba renderProd(prod)
 
 function inputSerch(evt){
     console.log(evt.target.value)
@@ -257,6 +238,4 @@ function deleteProd(idProd){
 
  
 }
-
-
- 
+  
