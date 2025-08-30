@@ -16,7 +16,7 @@
 .container-header{ 
   width: 100%;
   padding: 10px ;
-  background-color: rgb(28, 27, 27);
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
 justify-content: space-around;
 position: fixed;
@@ -99,8 +99,26 @@ text-align: center;
   100% { transform: translateX(-121%); } /* Desplaza todo el slider */
 }
 /*-- fin del slider-- */
+.somos {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  color: #ffffff;
+  background-color: #ff9100;
+}
 
+.somos-texto {
+  /* Establece un ancho máximo para que el texto no ocupe toda la pantalla */
+  max-width: 800px; 
+  /* Centra el contenedor del texto horizontalmente */
+  margin-left: auto;
+  margin-right: auto;
+}
 
+em{
+  color: #ff9100;
+  font-weight: bold;
+}
 
 /*card*/
 
@@ -219,7 +237,7 @@ text-align: center;
 
     /* Footer */
     footer {
-     background-color: rgb(69, 66, 66);
+      background-color: rgba(0, 0, 0, 0.5);
       color: white;
       padding: 20px;
     
@@ -250,7 +268,15 @@ text-align: center;
     }
 
 /*panel d econtrol*/
+.container-fluid{
+  width: 100px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  
+}
 .table-container{
+  
   display: flex;
   
   justify-content: space-between;
@@ -258,8 +284,29 @@ text-align: center;
   width: 100%;
  height: auto;
  padding: 60px;
- padding-top: 130px;
+ padding-top: 130px; 
    
+}
+/* Estilos para el contenedor de los inputs */
+.formuario-alta-de-disco{
+  font-size: 20px;
+  margin: 30px;
+  padding: 15px;
+}
+.subir-disco {
+  
+  display: flex;
+  font-weight: 700;
+  color: #ff9100;
+  flex-direction: column; /* Coloca los elementos en una columna */
+  gap: 10px; /* Añade un espacio entre los elementos */
+  margin-bottom: 10px; /* Espacio debajo del contenedor */
+}
+
+/* Estilos para el botón */
+#submit {
+  display: block; /* Ocupa todo el ancho */
+  margin: 0 auto; /* Centra el botón */
 }
 .table-panel{
   width: 50%;
@@ -270,10 +317,45 @@ text-align: center;
  
 
 }
+
+.poner-disc {
+  display: flex;
+  justify-content: space-between; /* Distribuye el espacio equitativamente entre los elementos */
+  align-items: flex-start; /* Alinea los elementos en la parte superior */
+}
+
+.formuario-alta-de-disco {
+  /* Si quieres que el formulario ocupe un tercio del espacio, por ejemplo */
+  flex: 1; 
+  margin-right: 20px; /* Agrega un espacio entre el formulario y el buscador */
+}
+
+.buscador-cd {
+  /* Si quieres que la tabla ocupe el resto del espacio */
+  flex: 2;
+}
+#submit{
+  color: #030303;
+  background-color: #ff9100;
+  font-size: 20px;
+  border: none;
+   border-radius: 10px;
+  padding: 5px;
+
+}
+#submit:hover{
+ color: #ffffff;
+ background-color: #070707;
+}
+.titulo-usuario-carga{
+   text-transform: uppercase;
+   font-weight: 500;
+}
+
 /* buscadores*/
 
 .carga-de-producto{
-  background-color: #f2a91a;
+  background-color: #000000;
  margin-bottom: 20px;
   justify-items: center;
   text-align: center;
@@ -355,11 +437,8 @@ text-align: center;
   
 }
 .disc-serch{
-  background-color: #25f21a;
-   width: 300px;
-    padding: 90px;
-    border: 1px solid #bd1515;
-    border-radius: 5px;
+    color: #ff9100;
+    font-weight: 700;
 }
 .poner-disc{
 

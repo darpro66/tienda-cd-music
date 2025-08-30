@@ -24,35 +24,35 @@
    
   <div class="container-fluid">
 
-    <div class="row g-0">
+    <div class="carga-de-usuario">
 
        <div class="col-12 col-lg-4 col-sm-2 poner-disc">
 
-        <div class="discos-form bg-primary-subtitle"> 
-       <h2 class="fs-4">carga de usuario</h2>
+        <div class="formuario-alta-de-disco"> 
+       <h2 class="titulo-usuario-carga">carga de usuario</h2>
        <form  id="disco-form">
-         <div class="mb1">
+         <div class="subir-disco">
           <label for="image" class="full-label">url</label>
           <input type="url" name="image" id="imagen" value="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Horcas.jpg/330px-Horcas.jpg ">
-        </div>
-        <div class="mb1">
+
           <label for="fullname" class="full-label">nombre disc</label>
           <input type="text" name="nombre" id="nombre" value="horcas">
         </div>
         <button type="submit" id="submit">subir</button>
        </form>
+         <div class="buscador-cd">
+           <div class="discos-list bg-info-subtle" id="table-container">
+               <div class="disc-serch">
+                 <label for="serch-1" class="form-label">buscar disco</label>
+            <input type="text" class="fron-control" id="serch" onkeyup="inputSerch(event)">
+               </div>
         </div>
 
        </div>
 
     </div>
 
-       <div class="col-12 col-lg-8">
-           <div class="discos-list bg-info-subtle" id="table-container">
-               <div class="disc-serch">
-                 <label for="serch-1" class="form-label">buscar disco</label>
-            <input type="text" class="fron-control" id="serch" onkeyup="inputSerch(event)">
-               </div>
+       
     <table class="table-panel">
   
          <thead>

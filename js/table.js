@@ -1,21 +1,6 @@
 
 const prod =[
-    {
-        imagen: 'img/almafuerte-.jpg',
-        nombre: 'almafuerte:ultimando',
-        comprar: 'comprar',
-        precio: '$60.000',
-        stoc:'0',
-        id:'1'
-    },
-    {
-        imagen: 'img/almafuerte-1.jpg',
-        nombre: 'almafuerte:trillando la fina',
-        comprar: 'comprar',
-        precio: '$50.000',
-         stoc:'0',
-        id:'2'
-    },
+     
     {
         imagen: 'img/guns.jpg',
         nombre: 'guns:appetite for destruction',
@@ -60,51 +45,8 @@ const prod =[
         id:'7'
 
     },
-    {
-        imagen: 'img/metallica.jpg',
-        nombre: 'metallica;black&album',
-        comprar: 'comprar',
-        precio: '$80.000',
-        stoc:'2',
-        id:'8'
-
-    },
-    {
-        imagen: 'img/v8-l.jpg',
-        nombre: 'v8:luchando por el metal',
-        comprar: 'comprar',
-        precio: '$76.000',
-        stoc:'12',
-        id:'9'
-
-    },
-    {
-        imagen: 'img/alma-2.jpg',
-        nombre: 'almafuerte:piedra libre',
-        comprar: 'comprar',
-        precio:'$88.000',
-        stoc:'0',
-        id:'10'
-
-    },
-    {
-        imagen: 'img/nirvana.jpg',
-        nombre: 'nirvana:unplugged',
-        comprar: 'comprar',
-        precio: '$64.000',
-        stoc:'1',
-        id:'11'
-
-    },
-    {
-        imagen: 'img/acido-arg.jpg',
-        nombre: 'hermetica:acido argentino',
-        comprar: 'comprar',
-        precio: '$59.000',
-        stoc:'4',
-        id:'12'
-
-    }
+     
+     
 ];
 
 
@@ -114,7 +56,8 @@ const prod =[
 const tableHTML = document.getElementById("table-container")
 const tableBodyHTML = document.getElementById("table-body")
 
- 
+ const discoFormHTML = document.getElementById('disco-form')
+ const btnSubmitHTML = document.getElementById('submit')
 
  
 
@@ -134,7 +77,7 @@ const tableBodyHTML = document.getElementById("table-body")
         
 
        prod.push(nuevoDisco)
-       renderProductos(prod)
+       renderProd(prod)
  })
  
  
