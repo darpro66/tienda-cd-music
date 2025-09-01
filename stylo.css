@@ -14,6 +14,19 @@
   /* header-navbar */
     
 .container-header{ 
+    width: 100%;
+display: flex; /* Usamos Flexbox para el layout del header */
+  justify-content: space-between;
+  align-items: center;
+ background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  position: fixed;
+ top: 0;
+ z-index: 1000;
+
+
+  /*
   width: 100%;
   padding: 10px ;
   background-color: rgba(0, 0, 0, 0.5);
@@ -21,7 +34,7 @@
 justify-content: space-around;
 position: fixed;
  top: 0;
- z-index: 1000; 
+ z-index: 1000; */
  
 }
 
@@ -42,12 +55,24 @@ text-align: center;
   border-radius: 10%;
 }
 .nav-link{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+   color: #ff9100;
+  text-transform: uppercase;
+transition: transform 0.3s ease, font-size 0.3s ease;
+
+  /*
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-weight: 500;
   color: #ff9100;
   text-transform: uppercase;
   text-decoration: none;
   transition: transform 0.3s ease, font-size 0.3s ease;
+  */
 
 }
 .nav-link:hover{
@@ -58,12 +83,25 @@ text-align: center;
       font-size: 10px; /* Aumenta ligeramente la fuente */
 
 }
-.nav-list{
+.nav-list{ 
   text-decoration: none;
   display: flex;
   gap: 25px;
   list-style: none;
 }
+
+/* Ocultamos el botón de hamburguesa y el checkbox por defecto en escritorio */
+#menu-toggle {
+  display: none;
+}
+
+.hamburger {
+  display: none;
+  color:  #ff9100;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 
 
 
@@ -464,6 +502,69 @@ em{
 } */
 
 /* Ajuste responsive para pantallas pequeñas */
+
+
+
+/* ---------------------------------------------------- */
+/* Media Queries para Tablet y Móvil */
+
+/* Escritorio: min-width 1024px */
+/* Los estilos de arriba ya funcionan para este rango */
+
+/* Tablet: Ancho mínimo 768px y máximo 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nav-list {
+    gap: 10px; /* Reducimos el espacio entre los links */
+  }
+}
+
+/* Celular: Ancho máximo 767px (no min-width 767px) */
+@media (max-width: 767px) {
+  .container-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-menu {
+    width: 100%;
+  }
+
+  .nav-list {
+   /* Ocultamos los links por defecto */
+   display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+      gap: 20px;
+  }
+
+  .nav-item {
+    width: 100%;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 20px;
+  
+     
+  }
+  
+  /* Mostramos el botón de hamburguesa */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+  
+  /* Cuando el checkbox está marcado, mostramos los links */
+  #menu-toggle:checked ~ .nav-menu .nav-list {
+    display: flex;
+    
+  }
+}
+
+
 @media (max-width: 768px) {
   .card-wrapper {
     width: 100%;
@@ -471,13 +572,138 @@ em{
 }
 
 
+ /* Tablet: min-width 768px y max-width 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .slider-item {
+    width: 200px; /* Reduce un poco el tamaño de las imágenes */
+  }
+}
+
+/* Celular: Ancho máximo 767px */
+@media (max-width: 767px) {
+  .slider-item {
+    width: 80%; /* Las imágenes ocupan la mayoría del ancho de la pantalla */
+  }
+}
+
+/* ---------------------------------------------------- */
+/* Estilos para la sección "Sobre Nosotros" */
+
+.sobre-mi {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto; /* Centra la sección en la página */
+  text-align: justify;
+}
+
+.somos {
+  text-align: center; /* Centra el título */
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.somos-texto p {
+  line-height: 1.6;
+  color: #555;
+}
+
+
+
+
+
+/* ---------------------------------------------------- */
+/* Media Queries */
+
+/* Desktop: min-width 1024px */
+@media (min-width: 1024px) {
+  .poner-disc {
+    flex-basis: 33.333%; /* 4 columnas de 12 */
+  }
+
+  .table-panel {
+    flex-grow: 1; /* La tabla ocupa el espacio restante */
+  }
+}
+
+/*Celular: Ancho máximo 767px */
+@media (max-width: 767px) {
+  /* ... tu código existente ... */
+
+  .table-panel td {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Cambia a left si lo prefieres */
+    padding: 10px;
+    text-align: center; /* ¡Esta es la clave para centrar el contenido! */
+  }
+
+}
 
 
 
 
 
 
+/* Tablet: min-width 768px y max-width 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .poner-disc {
+    flex-basis: 45%; /* Ancho ajustado para tabletas */
+  }
+  
+  .table-panel {
+    flex-grow: 1;
+  }
+}
 
+/* Celular: Ancho máximo 767px */
+@media (max-width: 767px) {
+  .carga-de-usuario {
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+  }
+
+  /* Para que la tabla no se salga de la pantalla */
+  .table-responsive {
+    overflow-x: auto;
+  }
+
+  .table-panel {
+    display: block; /* La tabla se muestra como un bloque */
+    width: 100%; /* Ocupa el 100% del ancho */
+  }
+  
+  .table-panel thead,
+  .table-panel tbody,
+  .table-panel tr {
+    display: block;
+    width: 100%;
+  }
+  
+  .table-panel tr {
+    margin-bottom: 10px;
+    border: 1px solid #cfb8b8;
+  }
+
+  .table-panel td,
+  .table-panel th {
+    display: block;
+    text-align: center;
+    padding: 10px;
+     
+  }
+  
+  .table-panel td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: capitalize;
+   
+  }
+  
+  /* Ocultamos las cabeceras de la tabla para mobile y las reemplazamos con data-label */
+  .table-panel thead {
+    display: none;
+  }
+}
 
 
 
